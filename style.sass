@@ -1,0 +1,193 @@
+$col-1: #60372f
+$accent: #00a671
+$col-2: #e5e5e5
+$col-3: #54555A
+
+.bg-col-1
+  background: $col-1
+  color: white
+
+.main-button
+  width: 350px
+  max-height: 35px
+  background: $col-3
+  color: white
+  border: none
+  text-transform: uppercase
+  margin-left: 15px
+
+  &:hover
+    cursor: pointer
+
+  &.small
+    width: 200px
+    margin-bottom: 16px
+    padding: 2px 0
+
+  &.send
+
+
+#navbarSupportedContent
+  font-size: 14px
+  ul
+    margin: 0 auto
+    li
+      color: white
+      &.active
+        color: $accent
+        font-weight: bolder
+    a
+      text-transform: uppercase
+      color: inherit
+
+.ball
+  background: $accent
+  color: white
+  border-radius: 50%
+  width: 20px
+  height: 20px
+  text-align: center
+
+.multiselect
+  .buttons
+    position: relative
+
+    .selector
+      position: relative
+      background: $col-2
+      padding: 8px
+      height: 35px
+
+      .arrow
+        position: absolute
+        top: 0
+        right: 0
+
+        &:hover
+          cursor: pointer
+
+    .values
+      background: $col-2
+      padding: 8px
+      position: absolute
+      width: calc(100% - 30px)
+      z-index: 9999
+
+      input
+        -webkit-appearance: none
+        background-color: white
+        border: 1px solid #cacece
+        padding: 6px
+        border-radius: 3px
+        display: inline-block
+        position: relative
+
+        &:checked:after
+          content: '\2714'
+          font-size: 8px
+          position: absolute
+          top: 0
+          left: 2px
+
+.hide
+  transition: display 1s
+  display: none
+
+table
+  width: 100%
+  font-size: 12px
+
+  thead
+    border-top: 1px solid black
+    border-bottom: 1px solid black
+  .title
+    .name
+      max-width: 70px
+      min-height: 50px
+      float: left
+
+    img
+      margin-left: 4px
+      cursor: pointer
+
+#table_pagination
+  margin: 0 auto
+  max-width: 200px
+  button
+    margin-right: 8px
+    padding: 2px 8px
+    border: none
+    background: $col-2
+    font-size: 12px
+
+    &:hover
+      cursor: pointer
+
+    &.clicked
+      background: $accent
+      color: white
+
+.rzuty
+  background-image: url("./assets/Grupa 46.png")
+  background-size: contain
+  color: white
+
+  .description
+    background: $col-1
+    padding: 16px
+
+    tr
+      margin-bottom: 4px
+
+.contact
+  background-image: url("assets/bgreen_g.png")
+  background-size: contain
+  color: white
+  font-size: 12px
+
+  .title
+    float: right
+    font-size: 20px
+    border-bottom: 1px solid $accent
+    padding-top: 16px
+    width: 200px
+
+  .formularz
+    input, textarea
+      width: 300px
+
+    .required
+      position: relative
+      max-width: 300px
+      margin-bottom: 25px
+      border: 1px solid red
+
+      &::after
+        content: "required"
+        position: absolute
+        border: 1px solid red
+        color: red
+        font-weight: bold
+        background: white
+        width: 70px
+        height: 20px
+        text-align: center
+        top: -22px
+        right: 0
+
+    .autentykacja
+      width: 300px
+      margin: 0
+      input
+        width: 140px
+        max-height: 24px
+        float: outside
+
+      .input-container, .email-container
+        margin-left: 17px
+
+  .main-button
+    width: 300px
+    margin: 0
+
+

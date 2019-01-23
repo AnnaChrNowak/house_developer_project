@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project for Ultimate System</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-col-1">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">inwestycja</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">dostępność</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">rzuty mieszkań</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/bg.png" class="d-block" alt="...">
+          <div class="carousel-caption">
+            <h5>...</h5>
+            <p>...</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/bg.png" class="d-block" alt="...">
+          <div class="carousel-caption">
+            <h5>...</h5>
+            <p>...</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/bg.png" class="d-block" alt="...">
+          <div class="carousel-caption">
+            <h5>...</h5>
+            <p>...</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div class="row multiselect" >
+          <div class="col buttons">
+            <div class="selector"  >
+              <span>Kondygnacja</span>
+              <div class="arrow" onclick="switching(this)">
+                <img class="arrow-image" src="assets/rozwin.png" alt="">
+              </div>
+            </div>
+            <div class="values hide" >
+              <div>
+                <input type="checkbox" value="parter" column="kondygnacja">
+                <span>Parter</span>
+              </div>
+              <div>
+                <input type="checkbox" value="piętro" column="kondygnacja">
+                <span>Piętro</span>
+              </div>
+            </div>
+            </div>
+          <div class="col buttons">
+            <div class="selector">
+              <span>Ogródek/Strych</span>
+              <div class="arrow" onclick="switching(this)">
+                <img class="arrow-image" src="assets/rozwin.png" alt="">
+              </div>
+            </div>
+            <div class="values hide">
+              <div>
+                <input type="checkbox" value="ogrodek" column="typ_pow_dodatkowej">
+                <span>Ogródek</span>
+              </div>
+              <div>
+                <input type="checkbox" value="strych" column="typ_pow_dodatkowej">
+                <span>Strych</span>
+              </div>
+            </div>
+          </div>
+          <div class="col buttons">
+            <div class="selector">
+              <span>Status</span>
+              <div class="arrow" onclick="switching(this)">
+                <img class="arrow-image" src="assets/rozwin.png" alt="">
+              </div>
+            </div>
+            <div class="values hide">
+              <div>
+                <input type="checkbox" value="wolny" column="status">
+                <span>Wolny</span>
+              </div>
+              <div>
+                <input type="checkbox" value="rezerwacja" column="status">
+                <span>Rezerwacja</span>
+              </div>
+              <div>
+                <input type="checkbox" value="sprzedany" column="status">
+                <span>Sprzedany</span>
+              </div>
+            </div>
+          </div>
+          <div class="col buttons">
+            <div class="selector">
+              <span>Cena</span>
+              <div class="arrow" onclick="switching(this)">
+                <img class="arrow-image" src="assets/rozwin.png" alt="">
+              </div>
+            </div>
+            <div class="values hide">
+              <div>
+                <input type="checkbox" value="289500" column="cena">
+                <span>289500</span>
+              </div>
+              <div>
+                <input type="checkbox" value="259500" column="cena">
+                <span>259500</span>
+              </div>
+            </div>
+          </div>
+          <button class="main-button" onclick="refresh(filtering = true)">filtrowanie</button>
+        </div>
+
+      </div>
+      <div class="col-2"></div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <table>
+          <thead>
+            <tr>
+              <td class="title">
+                <p class="name">nr budynku mieszkania</p>
+                <div class="col">
+                  <img class="sorting" src="assets/sort_up.png" alt="" column="numer" order="asc">
+                  <img class="sorting" src="assets/sort_down.png" alt="" column="numer" order="desc">
+                </div>
+              </td>
+              <td class="title">
+                <p class="name">kondygnacja</p>
+                <div class="col">
+                  <img class="sorting" src="assets/sort_up.png" alt="" column="kondygnacja" order="asc">
+                  <img class="sorting" src="assets/sort_down.png" alt="" column="kondygnacja" order="desc">
+                </div>
+                </td>
+              <td class="title">
+                <p class="name">powierzchnia użytkowa</p>
+                <div class="col">
+                  <img class="sorting" src="assets/sort_up.png" alt="" column="pow_uzytkowa" order="asc">
+                  <img class="sorting" src="assets/sort_down.png" alt="" column="pow_uzytkowa" order="desc">
+                </div>
+              </td>
+              <td class="title">
+                <p class="name">powierzchnia ogródka /strychu</p>
+                <div class="col">
+                  <img class="sorting" src="assets/sort_up.png" alt="" column="typ_pow_dodatkowej" order="asc">
+                  <img class="sorting" src="assets/sort_down.png" alt="" column="typ_pow_dodatkowej" order="desc">
+                </div>
+              </td>
+              <td class="title">
+                <p class="name">cena brutto</p>
+                <div class="col">
+                  <img class="sorting" src="assets/sort_up.png" alt="" column="cena" order="asc">
+                  <img class="sorting" src="assets/sort_down.png" alt="" column="cena" order="desc">
+                </div>
+              </td>
+              <td class="title"><p class="name">plan</p></td>
+              <td class="title">
+                <p class="name">status</p>
+                <div class="col">
+                  <img class="sorting" src="assets/sort_up.png" alt="" column="status" order="asc">
+                  <img class="sorting" src="assets/sort_down.png" alt="" column="status" order="desc">
+                </div>
+              </td>
+            </tr>
+          </thead>
+          <tbody id="table_body"></tbody>
+        </table>
+        <div class="mt-4">
+          <div id="table_pagination" class="row"></div>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <div class="row mt-5">
+      <div class="col rzuty p-5">
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4 pt-5">
+              <img src="assets/rzut.png" alt="">
+            </div>
+            <div class="col-4 pt-5">
+              <div class="row">
+                <button class="main-button small">parter lewy</button>
+                <button class="main-button small">parter prawy</button>
+              </div>
+              <div class="row">
+                <button class="main-button small">piętro lewe</button>
+                <button class="main-button small">piętro prawe</button>
+              </div>
+              <div class="description">
+                <table>
+                  <tr>
+                    <td>powierzchnia użytkowa</td>
+                    <td></td>
+                    <td>64,32 m2</td>
+                  </tr>
+                  <tr><td><div class="ball">1</div><td>salon z aneksem kuchennym</td><td>10m2</td></tr>
+                  <tr><td><div class="ball">2</div></td><td>łazienka</td><td>10m2</td></tr>
+                  <tr><td><div class="ball">3</div></td><td>pokój</td><td>10m2</td></tr>
+                  <tr><td><div class="ball">4</div></td><td>pokój</td><td>10m2</td></tr>
+                  <tr><td><div class="ball">5</div></td><td>garderoba</td><td>10m2</td></tr>
+                  <tr><td><div class="ball">6</div></td><td>hol</td><td>10m2</td></tr>
+                  <tr><td><div class="ball">7</div></td><td>przedpokój</td><td>10m2</td></tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-2"></div>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col contact p-5">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-5">
+            <div class="row">
+              <div class="col-7">
+                <div>
+                  <img src="assets/Inteligentny%20obiekt%20wektorowy.png" alt="">
+                  <div class="title">KONTAKT</div>
+                </div>
+                <div class="mt-5">
+                  <img src="assets/logo%20sbdim.png" alt="">
+                </div>
+                <div class="mt-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque debitis delectus dolorem
+                  ex explicabo impedit libero necessitatibus provident quas repellendus rerum saepe, sapiente.
+                </div>
+              </div>
+              <div class="col-5 mt-5">
+                <div class="mt-5">Lorem Ipsum Sp. z o.o.</div>
+                <div>32-020 Kraków, Floriańska 1/1</div>
+                <div class="mt-3">+48 777 777 777</div>
+                <div>kontact@kontact.com.pl</div>
+                <div class="mt-3">KRS: 0000002222333</div>
+                <div>REGON: 1233456789</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 formularz mt-5">
+
+              <p class="input-container">
+                <input class="form-input" type="text" placeholder="imię i nazwisko">
+              </p>
+              <p class="email-container">
+                <input type="email" placeholder="e-mail" class="" id="email">
+              </p>
+              <p class="input-container">
+                <textarea name="" id="" cols="30" rows="10" placeholder="treść wiadomości" class=""></textarea>
+              </p>
+
+              <div class="row autentykacja">
+                <input id="authenication-code" type="text" value="AX45FG6">
+                <p class="input-container">
+                  <input id="rewrote-authenication-code" type="text" placeholder="przepisz">
+                </p>
+              </div>
+
+              <button class="main-button mt-2" onclick="sendForm()">wysłanie formularza</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+          integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+          integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+          crossorigin="anonymous"></script>
+  <script src="./data.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
